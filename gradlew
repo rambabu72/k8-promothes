@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.402.b06-1.amzn2.0.1.x86_64"
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64"
 ##############################################################################
 ##
 ##  Gradle start up script for UN*X
