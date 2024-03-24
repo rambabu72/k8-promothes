@@ -3,13 +3,13 @@ pipeline {
     environment {
         //be sure to replace "bhavukm" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "bhavukm/train-schedule"
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64/bin'
+        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64'
     }
     stages {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                echo '$JAVA_HOME'
+                echo '${JAVA_HOME}'
                 sh 'chmod +x ./gradlew && ./gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
