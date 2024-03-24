@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-		
+                echo '$JAVA_HOME'
                 sh 'chmod +x ./gradlew && ./gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
